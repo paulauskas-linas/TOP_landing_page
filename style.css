@@ -1,10 +1,54 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+header, main, footer {
+    padding: 0 200px;
 }
 header {
     background-color: #1f2937;
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 200px;
+}
+
+.headerLogo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+header a {
+    text-decoration: none;
+    color: #E5E7EB; 
+    font-size: 18px;
+}
+
+header li {
+    list-style: none;
+    margin: 0 12px;
+}
+
+header ul {
+    display: flex;
+}
+
+footer {
+    background-color: #1f2937;
+    color: #F9FAF8;
+    padding: 24px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
