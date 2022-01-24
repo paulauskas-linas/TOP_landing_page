@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,13 +7,17 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    /* height: 200vh; */
+    width: 100%;
 }
-header, main, footer {
+
+/* header, footer, main */
+
+header, footer {
     padding: 0 200px;
 }
 header {
@@ -50,5 +56,96 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+main {
+    display: flex;
+    flex-direction: column;
+
+    /* height: 100vh; */
+}
+/* HERO SECTION */
+.heroSection {
+    flex: 1;
+    display: flex;
+    background-color: #1f2937;
+    padding: 50px 200px;
+}
+
+.leftHero {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.leftHero h2 {
+    font-size: 48px;
+    font-weight: 900; 
+    color: #F9FAF8;
+}
+
+.leftHero p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.leftHero button {
+    background-color: #3882f6;
+    align-self: flex-start;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px; 
+    color: #E5E7EB;
+    border-radius: 6px;
+    padding: 5px 24px;
+    border-style: none;
+    margin: 32px 0;
+}
+.rightHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #818181;
+    border-radius: 5px;
+}
+
+.rightHero p {
+    color: #E5E7EB;
+    text-align: center;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 200px;
+
+}
+
+.infoText {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 48px;
+}
+
+.cardImage {
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    border: solid #3882f6 4px;
+    margin: auto;
+}
+
+.cardText {
+    width: 100%;
+    font-size: 18px;
+    color: #818181;
+    text-align: center;
+}
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 200px;
 }
