@@ -4,59 +4,80 @@
     --mainColordark: #1f2937;
     --mainColorlight: #F9FAF8;
     --buttonColor: #3882f6;
-    --lightGrey: #e5e7eb;}
-
+    --lightGrey: #e5e7eb;
+}
+/* Set up box model  */
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;}
+    padding: 0;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;}
+    width: 100%;
+}
 
-/* header, footer, main */
-
-header {
+/* header, footer, main, button */
+header, footer {
     background-color: var(--mainColordark);
-    flex-grow: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 200px;}
+    padding: 24px 200px;
+}
+
+header { 
+    flex-grow: 0; /* from body flex */
+    justify-content: space-between; 
+}
 
 .headerLogo {
     font-size: 24px;
-    color: var(--mainColorlight);}
+    color: var(--mainColorlight);
+}
 
 header a {
     text-decoration: none;
     color: var(--lightGrey); 
-    font-size: 18px;}
+    font-size: 18px;
+}
 
 header li {
     list-style: none;
-    margin: 0 12px;}
+    margin: 0 12px;
+}
 
 header ul {
-    display: flex;}
+    display: flex;
+}
 
 footer {
-    background-color: var(--mainColordark);
     color: var(--mainColorlight);
-    padding: 24px 200px;
-    display: flex;
     justify-content: center;
-    align-items: center;}
+}
 
 main {
     display: flex;
     flex-direction: column;}
 
-/* HERO SECTION */
+button {
+    background-color: var(--buttonColor);
+    align-self: flex-start;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px;
+    font-weight: 700; 
+    color: var(--lightGrey);
+    border-radius: 6px;
+    padding: 5px 24px;
+    border-style: none;
+    margin: 32px 0;
+}
+
+    /* HERO SECTION */
+
 .heroSection {
     flex: 1;
     display: flex;
@@ -77,17 +98,6 @@ main {
     font-size: 18px;
     color: var(--lightGrey);}
 
-.leftHero button {
-    background-color: var(--buttonColor);
-    align-self: flex-start;
-    font-family: 'Roboto', sans-serif; 
-    font-size: 18px; 
-    color: var(--lightGrey);
-    border-radius: 6px;
-    padding: 5px 24px;
-    border-style: none;
-    margin: 32px 0;}
-
 .rightHero {
     display: flex;
     justify-content: center;
@@ -98,9 +108,9 @@ main {
 
 .rightHero p {
     color: var(--lightGrey);
-    text-align: center;
-}
-/* INFOSECTION */
+    text-align: center;}
+
+    /* INFOSECTION */
 
 .infoSection {
     display: flex;
@@ -143,12 +153,57 @@ main {
 /* QUOTESECTION */
 .quoteSection {
     background-color: var(--lightGrey);
-    padding: 50px 250px;
+    padding: 120px 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .quote {
     font-size: 36px;
     font-weight: 300;
     font-style: italic;
-    color: var(--mainColordark);}
-    
+    color: var(--mainColordark);
+    margin: 0 24px;
+    text-align: justify;}
+
+ .quoteAuthor {
+     text-align: right;
+     font-weight: bold;
+     font-size: 24px;
+     margin-right: 24px;
+ }
+ 
+ /* ACTIONSECTION */
+
+ .actionSection, .actionContainer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .actionSection {
+    padding: 120px 180px;
+    color: white;
+ }
+
+ .actionContainer {
+    padding: 40px 120px;
+    background-color: var(--buttonColor);
+    width: 100%;
+    /* margin: 0 32px; */
+    border-radius: 12px;
+ }
+
+ .actionTitle {
+    font-size: 22px;
+    font-weight: bold;
+ }
+
+ .actionSubtitle {
+     color: var(--lightGrey);
+ }
+
+ .actionContainer button {
+    border: solid var(--lightGrey) 1px;
+
+ }
